@@ -14,6 +14,11 @@
 		B841CB971F935CC5007BAE7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841CB951F935CC5007BAE7C /* LaunchScreen.storyboard */; };
 		B841CBA41F935FC7007BAE7C /* CatImageListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBA31F935FC7007BAE7C /* CatImageListCollectionViewController.swift */; };
 		B841CBA71F9362A7007BAE7C /* CatImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */; };
+		B841CBAA1F9365B2007BAE7C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBA91F9365B2007BAE7C /* Constant.swift */; };
+		B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBAC1F936831007BAE7C /* RestClient.swift */; };
+		B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */; };
+		B841CBB21F9369A4007BAE7C /* CatImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */; };
+		B841CBB41F9372C6007BAE7C /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBB31F9372C6007BAE7C /* Secret.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +32,11 @@
 		B841CB981F935CC5007BAE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B841CBA31F935FC7007BAE7C /* CatImageListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageListCollectionViewController.swift; sourceTree = "<group>"; };
 		B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageCollectionViewCell.swift; sourceTree = "<group>"; };
+		B841CBA91F9365B2007BAE7C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		B841CBAC1F936831007BAE7C /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
+		B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientConvenience.swift; sourceTree = "<group>"; };
+		B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageInfo.swift; sourceTree = "<group>"; };
+		B841CBB31F9372C6007BAE7C /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		FBA7505A5E3C99C517A159AB /* Pods-GiniCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiniCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiniCats/Pods-GiniCats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,6 +81,10 @@
 		B841CB8B1F935CC5007BAE7C /* GiniCats */ = {
 			isa = PBXGroup;
 			children = (
+				B841CBB31F9372C6007BAE7C /* Secret.swift */,
+				B841CBB01F936993007BAE7C /* Model */,
+				B841CBAB1F93660C007BAE7C /* Service */,
+				B841CBA81F936585007BAE7C /* Constant */,
 				B841CBA51F936277007BAE7C /* View */,
 				B841CBA21F935E2E007BAE7C /* AppDelegate */,
 				B841CBA11F935E2B007BAE7C /* Controller */,
@@ -120,6 +134,31 @@
 				B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		B841CBA81F936585007BAE7C /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				B841CBA91F9365B2007BAE7C /* Constant.swift */,
+			);
+			name = Constant;
+			sourceTree = "<group>";
+		};
+		B841CBAB1F93660C007BAE7C /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				B841CBAC1F936831007BAE7C /* RestClient.swift */,
+				B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		B841CBB01F936993007BAE7C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		C0AD6D8E38167368569E0FAA /* Pods */ = {
@@ -268,9 +307,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B841CBB21F9369A4007BAE7C /* CatImageInfo.swift in Sources */,
 				B841CBA71F9362A7007BAE7C /* CatImageCollectionViewCell.swift in Sources */,
 				B841CB8D1F935CC5007BAE7C /* AppDelegate.swift in Sources */,
 				B841CBA41F935FC7007BAE7C /* CatImageListCollectionViewController.swift in Sources */,
+				B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */,
+				B841CBB41F9372C6007BAE7C /* Secret.swift in Sources */,
+				B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */,
+				B841CBAA1F9365B2007BAE7C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
