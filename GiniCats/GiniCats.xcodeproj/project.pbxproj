@@ -77,8 +77,8 @@
 			children = (
 				B841CB8B1F935CC5007BAE7C /* GiniCats */,
 				B841CB8A1F935CC5007BAE7C /* Products */,
-				C0AD6D8E38167368569E0FAA /* Pods */,
 				97F47E82718E0107A3853F12 /* Frameworks */,
+				C0AD6D8E38167368569E0FAA /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -93,14 +93,14 @@
 		B841CB8B1F935CC5007BAE7C /* GiniCats */ = {
 			isa = PBXGroup;
 			children = (
-				B841CBBA1F9383E3007BAE7C /* External Source */,
-				B841CBC71F938CCF007BAE7C /* Extension */,
-				B841CBB01F936993007BAE7C /* Model */,
-				B841CBAB1F93660C007BAE7C /* NetworkService */,
-				B841CBA81F936585007BAE7C /* Constant */,
-				B841CBA51F936277007BAE7C /* View */,
 				B841CBA21F935E2E007BAE7C /* AppDelegate */,
+				B841CBB01F936993007BAE7C /* Model */,
+				B841CBA51F936277007BAE7C /* View */,
 				B841CBA11F935E2B007BAE7C /* Controller */,
+				B841CBA81F936585007BAE7C /* Constant */,
+				B841CBC71F938CCF007BAE7C /* Extension */,
+				B841CBAB1F93660C007BAE7C /* NetworkService */,
+				B841CBBA1F9383E3007BAE7C /* External Source */,
 				B841CBA01F935E25007BAE7C /* Storyboard */,
 				B841CB9F1F935E1A007BAE7C /* Supporting Files */,
 			);
@@ -129,8 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				B841CBA31F935FC7007BAE7C /* CatImageListCollectionViewController.swift */,
-				B841CBBF1F9384D3007BAE7C /* MenuTableViewController.swift */,
 				B841CBC51F9387EE007BAE7C /* FavoriteCatListViewController.swift */,
+				B841CBBF1F9384D3007BAE7C /* MenuTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -149,7 +149,7 @@
 				B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */,
 				B841CBC11F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift */,
 			);
-			name = View;
+			path = View;
 			sourceTree = "<group>";
 		};
 		B841CBA81F936585007BAE7C /* Constant */ = {
@@ -157,7 +157,7 @@
 			children = (
 				B841CBA91F9365B2007BAE7C /* Constant.swift */,
 			);
-			name = Constant;
+			path = Constant;
 			sourceTree = "<group>";
 		};
 		B841CBAB1F93660C007BAE7C /* NetworkService */ = {
@@ -166,7 +166,7 @@
 				B841CBAC1F936831007BAE7C /* RestClient.swift */,
 				B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */,
 			);
-			name = NetworkService;
+			path = NetworkService;
 			sourceTree = "<group>";
 		};
 		B841CBB01F936993007BAE7C /* Model */ = {
@@ -175,17 +175,17 @@
 				B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */,
 				B841CBC31F9386F2007BAE7C /* FavoriteCatImageInfo.swift */,
 			);
-			name = Model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		B841CBBA1F9383E3007BAE7C /* External Source */ = {
 			isa = PBXGroup;
 			children = (
+				B841CBBB1F938400007BAE7C /* GiniCats-Bridging-Header.h */,
 				B841CBBC1F938401007BAE7C /* SWRevealViewController.h */,
 				B841CBBD1F938401007BAE7C /* SWRevealViewController.m */,
-				B841CBBB1F938400007BAE7C /* GiniCats-Bridging-Header.h */,
 			);
-			name = "External Source";
+			path = "External Source";
 			sourceTree = "<group>";
 		};
 		B841CBC71F938CCF007BAE7C /* Extension */ = {
@@ -193,7 +193,7 @@
 			children = (
 				B841CBC81F938CEC007BAE7C /* Date+TimeAgo.swift */,
 			);
-			name = Extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		C0AD6D8E38167368569E0FAA /* Pods */ = {
