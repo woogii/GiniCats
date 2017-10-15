@@ -18,7 +18,6 @@
 		B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBAC1F936831007BAE7C /* RestClient.swift */; };
 		B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */; };
 		B841CBB21F9369A4007BAE7C /* CatImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */; };
-		B841CBB41F9372C6007BAE7C /* Secret.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBB31F9372C6007BAE7C /* Secret.swift */; };
 		B841CBBE1F938401007BAE7C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B841CBBD1F938401007BAE7C /* SWRevealViewController.m */; };
 		B841CBC01F9384D3007BAE7C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBBF1F9384D3007BAE7C /* MenuTableViewController.swift */; };
 		B841CBC21F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC11F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift */; };
@@ -42,7 +41,6 @@
 		B841CBAC1F936831007BAE7C /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientConvenience.swift; sourceTree = "<group>"; };
 		B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageInfo.swift; sourceTree = "<group>"; };
-		B841CBB31F9372C6007BAE7C /* Secret.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secret.swift; sourceTree = "<group>"; };
 		B841CBBB1F938400007BAE7C /* GiniCats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiniCats-Bridging-Header.h"; sourceTree = "<group>"; };
 		B841CBBC1F938401007BAE7C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B841CBBD1F938401007BAE7C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
@@ -96,7 +94,6 @@
 			isa = PBXGroup;
 			children = (
 				B841CBBA1F9383E3007BAE7C /* External Source */,
-				B841CBB31F9372C6007BAE7C /* Secret.swift */,
 				B841CBC71F938CCF007BAE7C /* Extension */,
 				B841CBB01F936993007BAE7C /* Model */,
 				B841CBAB1F93660C007BAE7C /* NetworkService */,
@@ -357,7 +354,6 @@
 				B841CBA41F935FC7007BAE7C /* CatImageListCollectionViewController.swift in Sources */,
 				B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */,
 				B841CBBE1F938401007BAE7C /* SWRevealViewController.m in Sources */,
-				B841CBB41F9372C6007BAE7C /* Secret.swift in Sources */,
 				B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */,
 				B841CBC91F938CEC007BAE7C /* Date+TimeAgo.swift in Sources */,
 				B841CBAA1F9365B2007BAE7C /* Constant.swift in Sources */,
