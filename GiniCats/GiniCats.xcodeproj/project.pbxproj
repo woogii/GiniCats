@@ -18,12 +18,12 @@
 		B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBAC1F936831007BAE7C /* RestClient.swift */; };
 		B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */; };
 		B841CBB21F9369A4007BAE7C /* CatImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */; };
-		B841CBBE1F938401007BAE7C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B841CBBD1F938401007BAE7C /* SWRevealViewController.m */; };
 		B841CBC01F9384D3007BAE7C /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBBF1F9384D3007BAE7C /* MenuTableViewController.swift */; };
 		B841CBC21F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC11F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift */; };
 		B841CBC41F9386F2007BAE7C /* FavoriteCatImageInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC31F9386F2007BAE7C /* FavoriteCatImageInfo.swift */; };
 		B841CBC61F9387EE007BAE7C /* FavoriteCatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC51F9387EE007BAE7C /* FavoriteCatListViewController.swift */; };
 		B841CBC91F938CEC007BAE7C /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC81F938CEC007BAE7C /* Date+TimeAgo.swift */; };
+		B841CBD21F939CDE007BAE7C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B841CBD11F939CDE007BAE7C /* SWRevealViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,14 +41,14 @@
 		B841CBAC1F936831007BAE7C /* RestClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClient.swift; sourceTree = "<group>"; };
 		B841CBAE1F93684A007BAE7C /* RestClientConvenience.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestClientConvenience.swift; sourceTree = "<group>"; };
 		B841CBB11F9369A4007BAE7C /* CatImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageInfo.swift; sourceTree = "<group>"; };
-		B841CBBB1F938400007BAE7C /* GiniCats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiniCats-Bridging-Header.h"; sourceTree = "<group>"; };
-		B841CBBC1F938401007BAE7C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
-		B841CBBD1F938401007BAE7C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		B841CBBF1F9384D3007BAE7C /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		B841CBC11F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCatImageTableViewCell.swift; sourceTree = "<group>"; };
 		B841CBC31F9386F2007BAE7C /* FavoriteCatImageInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCatImageInfo.swift; sourceTree = "<group>"; };
 		B841CBC51F9387EE007BAE7C /* FavoriteCatListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteCatListViewController.swift; sourceTree = "<group>"; };
 		B841CBC81F938CEC007BAE7C /* Date+TimeAgo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+TimeAgo.swift"; sourceTree = "<group>"; };
+		B841CBCF1F939CDD007BAE7C /* GiniCats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiniCats-Bridging-Header.h"; sourceTree = "<group>"; };
+		B841CBD01F939CDE007BAE7C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		B841CBD11F939CDE007BAE7C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		FBA7505A5E3C99C517A159AB /* Pods-GiniCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiniCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiniCats/Pods-GiniCats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,9 +181,9 @@
 		B841CBBA1F9383E3007BAE7C /* External Source */ = {
 			isa = PBXGroup;
 			children = (
-				B841CBBB1F938400007BAE7C /* GiniCats-Bridging-Header.h */,
-				B841CBBC1F938401007BAE7C /* SWRevealViewController.h */,
-				B841CBBD1F938401007BAE7C /* SWRevealViewController.m */,
+				B841CBD01F939CDE007BAE7C /* SWRevealViewController.h */,
+				B841CBD11F939CDE007BAE7C /* SWRevealViewController.m */,
+				B841CBCF1F939CDD007BAE7C /* GiniCats-Bridging-Header.h */,
 			);
 			path = "External Source";
 			sourceTree = "<group>";
@@ -344,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B841CBD21F939CDE007BAE7C /* SWRevealViewController.m in Sources */,
 				B841CBB21F9369A4007BAE7C /* CatImageInfo.swift in Sources */,
 				B841CBC61F9387EE007BAE7C /* FavoriteCatListViewController.swift in Sources */,
 				B841CBA71F9362A7007BAE7C /* CatImageCollectionViewCell.swift in Sources */,
@@ -353,7 +354,6 @@
 				B841CB8D1F935CC5007BAE7C /* AppDelegate.swift in Sources */,
 				B841CBA41F935FC7007BAE7C /* CatImageListCollectionViewController.swift in Sources */,
 				B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */,
-				B841CBBE1F938401007BAE7C /* SWRevealViewController.m in Sources */,
 				B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */,
 				B841CBC91F938CEC007BAE7C /* Date+TimeAgo.swift in Sources */,
 				B841CBAA1F9365B2007BAE7C /* Constant.swift in Sources */,
@@ -491,7 +491,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = woogii.GiniCats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GiniCats/GiniCats-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GiniCats/External Source/GiniCats-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -509,7 +509,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = woogii.GiniCats;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "GiniCats/GiniCats-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "GiniCats/External Source/GiniCats-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
