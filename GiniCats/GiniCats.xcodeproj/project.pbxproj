@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		A246C870EE9BAC017EDB140E /* Pods_GiniCats.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A5CD7B6913709DCECF8E0F9 /* Pods_GiniCats.framework */; };
 		B841CB8D1F935CC5007BAE7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CB8C1F935CC5007BAE7C /* AppDelegate.swift */; };
-		B841CB8F1F935CC5007BAE7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CB8E1F935CC5007BAE7C /* ViewController.swift */; };
 		B841CB921F935CC5007BAE7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841CB901F935CC5007BAE7C /* Main.storyboard */; };
 		B841CB941F935CC5007BAE7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B841CB931F935CC5007BAE7C /* Assets.xcassets */; };
 		B841CB971F935CC5007BAE7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B841CB951F935CC5007BAE7C /* LaunchScreen.storyboard */; };
+		B841CBA41F935FC7007BAE7C /* CatImageListCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBA31F935FC7007BAE7C /* CatImageListCollectionViewController.swift */; };
+		B841CBA71F9362A7007BAE7C /* CatImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,11 +21,12 @@
 		8A5CD7B6913709DCECF8E0F9 /* Pods_GiniCats.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GiniCats.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B841CB891F935CC5007BAE7C /* GiniCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GiniCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B841CB8C1F935CC5007BAE7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B841CB8E1F935CC5007BAE7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B841CB911F935CC5007BAE7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B841CB931F935CC5007BAE7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B841CB961F935CC5007BAE7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B841CB981F935CC5007BAE7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B841CBA31F935FC7007BAE7C /* CatImageListCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageListCollectionViewController.swift; sourceTree = "<group>"; };
+		B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatImageCollectionViewCell.swift; sourceTree = "<group>"; };
 		FBA7505A5E3C99C517A159AB /* Pods-GiniCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiniCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiniCats/Pods-GiniCats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 		B841CB8B1F935CC5007BAE7C /* GiniCats */ = {
 			isa = PBXGroup;
 			children = (
+				B841CBA51F936277007BAE7C /* View */,
 				B841CBA21F935E2E007BAE7C /* AppDelegate */,
 				B841CBA11F935E2B007BAE7C /* Controller */,
 				B841CBA01F935E25007BAE7C /* Storyboard */,
@@ -98,7 +101,7 @@
 		B841CBA11F935E2B007BAE7C /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				B841CB8E1F935CC5007BAE7C /* ViewController.swift */,
+				B841CBA31F935FC7007BAE7C /* CatImageListCollectionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -109,6 +112,14 @@
 				B841CB8C1F935CC5007BAE7C /* AppDelegate.swift */,
 			);
 			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		B841CBA51F936277007BAE7C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		C0AD6D8E38167368569E0FAA /* Pods */ = {
@@ -257,8 +268,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B841CB8F1F935CC5007BAE7C /* ViewController.swift in Sources */,
+				B841CBA71F9362A7007BAE7C /* CatImageCollectionViewCell.swift in Sources */,
 				B841CB8D1F935CC5007BAE7C /* AppDelegate.swift in Sources */,
+				B841CBA41F935FC7007BAE7C /* CatImageListCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
