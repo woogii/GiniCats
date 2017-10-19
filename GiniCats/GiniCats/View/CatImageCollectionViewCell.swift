@@ -9,9 +9,9 @@
 import UIKit
 import SDWebImage
 
-// MARK : - CatImageCollectionViewCell: UICollectionViewCell
+// MARK: - CatImageCollectionViewCell: UICollectionViewCell
 class CatImageCollectionViewCell: UICollectionViewCell {
-  // MARK : - Property List
+  // MARK: - Property List
   @IBOutlet weak var imageIdLabel: UILabel!
   @IBOutlet weak var catImageView: UIImageView!
   @IBOutlet weak var favoriteButton: UIButton!
@@ -23,13 +23,13 @@ class CatImageCollectionViewCell: UICollectionViewCell {
   }
   var favoriteButtonTapAction: (() -> Void)?
 
-  // MARK : - Prepare For Reusing Cell
+  // MARK: - Prepare For Reusing Cell
   override func prepareForReuse() {
     super.prepareForReuse()
     catImageView.sd_cancelCurrentImageLoad()
   }
 
-  // MARK : - Target Action
+  // MARK: - Target Action
   @IBAction func tappedFavoriteButton(_ sender: UIButton) {
     if let buttonAction = favoriteButtonTapAction {
       // Call Action Closure
@@ -37,7 +37,7 @@ class CatImageCollectionViewCell: UICollectionViewCell {
     }
   }
 
-  // MARK : - Update Cell UI
+  // MARK: - Update Cell UI
   private func updateUI() {
     initCellProperty()
     setCatImage()

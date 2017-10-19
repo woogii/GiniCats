@@ -24,7 +24,19 @@
 		B841CBC61F9387EE007BAE7C /* FavoriteCatListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC51F9387EE007BAE7C /* FavoriteCatListViewController.swift */; };
 		B841CBC91F938CEC007BAE7C /* Date+TimeAgo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B841CBC81F938CEC007BAE7C /* Date+TimeAgo.swift */; };
 		B841CBD21F939CDE007BAE7C /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B841CBD11F939CDE007BAE7C /* SWRevealViewController.m */; };
+		B84AF3F81F98ED5600D75668 /* EmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84AF3F71F98ED5600D75668 /* EmptyView.swift */; };
+		B8A7F6791F95207E001393E2 /* GiniCatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A7F6781F95207E001393E2 /* GiniCatsTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B8A7F67B1F95207E001393E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B841CB811F935CC5007BAE7C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B841CB881F935CC5007BAE7C;
+			remoteInfo = GiniCats;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		703A991AAA58B7556CE4200D /* Pods-GiniCats.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiniCats.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GiniCats/Pods-GiniCats.debug.xcconfig"; sourceTree = "<group>"; };
@@ -49,6 +61,10 @@
 		B841CBCF1F939CDD007BAE7C /* GiniCats-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GiniCats-Bridging-Header.h"; sourceTree = "<group>"; };
 		B841CBD01F939CDE007BAE7C /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		B841CBD11F939CDE007BAE7C /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		B84AF3F71F98ED5600D75668 /* EmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyView.swift; sourceTree = "<group>"; };
+		B8A7F6761F95207E001393E2 /* GiniCatsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GiniCatsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8A7F6781F95207E001393E2 /* GiniCatsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GiniCatsTests.swift; sourceTree = "<group>"; };
+		B8A7F67A1F95207E001393E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FBA7505A5E3C99C517A159AB /* Pods-GiniCats.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GiniCats.release.xcconfig"; path = "Pods/Target Support Files/Pods-GiniCats/Pods-GiniCats.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -58,6 +74,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				A246C870EE9BAC017EDB140E /* Pods_GiniCats.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A7F6731F95207E001393E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				B841CB8B1F935CC5007BAE7C /* GiniCats */,
+				B8A7F6771F95207E001393E2 /* GiniCatsTests */,
 				B841CB8A1F935CC5007BAE7C /* Products */,
 				97F47E82718E0107A3853F12 /* Frameworks */,
 				C0AD6D8E38167368569E0FAA /* Pods */,
@@ -86,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				B841CB891F935CC5007BAE7C /* GiniCats.app */,
+				B8A7F6761F95207E001393E2 /* GiniCatsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +173,7 @@
 			children = (
 				B841CBA61F9362A7007BAE7C /* CatImageCollectionViewCell.swift */,
 				B841CBC11F9386B2007BAE7C /* FavoriteCatImageTableViewCell.swift */,
+				B84AF3F71F98ED5600D75668 /* EmptyView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -196,6 +222,15 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		B8A7F6771F95207E001393E2 /* GiniCatsTests */ = {
+			isa = PBXGroup;
+			children = (
+				B8A7F6781F95207E001393E2 /* GiniCatsTests.swift */,
+				B8A7F67A1F95207E001393E2 /* Info.plist */,
+			);
+			path = GiniCatsTests;
+			sourceTree = "<group>";
+		};
 		C0AD6D8E38167368569E0FAA /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +264,24 @@
 			productReference = B841CB891F935CC5007BAE7C /* GiniCats.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B8A7F6751F95207E001393E2 /* GiniCatsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B8A7F67D1F95207E001393E2 /* Build configuration list for PBXNativeTarget "GiniCatsTests" */;
+			buildPhases = (
+				B8A7F6721F95207E001393E2 /* Sources */,
+				B8A7F6731F95207E001393E2 /* Frameworks */,
+				B8A7F6741F95207E001393E2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B8A7F67C1F95207E001393E2 /* PBXTargetDependency */,
+			);
+			name = GiniCatsTests;
+			productName = GiniCatsTests;
+			productReference = B8A7F6761F95207E001393E2 /* GiniCatsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -244,6 +297,11 @@
 						DevelopmentTeam = MFYH4C9VNG;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
+					};
+					B8A7F6751F95207E001393E2 = {
+						CreatedOnToolsVersion = 8.3.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B841CB881F935CC5007BAE7C;
 					};
 				};
 			};
@@ -261,6 +319,7 @@
 			projectRoot = "";
 			targets = (
 				B841CB881F935CC5007BAE7C /* GiniCats */,
+				B8A7F6751F95207E001393E2 /* GiniCatsTests */,
 			);
 		};
 /* End PBXProject section */
@@ -273,6 +332,13 @@
 				B841CB971F935CC5007BAE7C /* LaunchScreen.storyboard in Resources */,
 				B841CB941F935CC5007BAE7C /* Assets.xcassets in Resources */,
 				B841CB921F935CC5007BAE7C /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B8A7F6741F95207E001393E2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -356,11 +422,28 @@
 				B841CBAD1F936831007BAE7C /* RestClient.swift in Sources */,
 				B841CBAF1F93684A007BAE7C /* RestClientConvenience.swift in Sources */,
 				B841CBC91F938CEC007BAE7C /* Date+TimeAgo.swift in Sources */,
+				B84AF3F81F98ED5600D75668 /* EmptyView.swift in Sources */,
 				B841CBAA1F9365B2007BAE7C /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B8A7F6721F95207E001393E2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B8A7F6791F95207E001393E2 /* GiniCatsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B8A7F67C1F95207E001393E2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B841CB881F935CC5007BAE7C /* GiniCats */;
+			targetProxy = B8A7F67B1F95207E001393E2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B841CB901F935CC5007BAE7C /* Main.storyboard */ = {
@@ -514,6 +597,34 @@
 			};
 			name = Release;
 		};
+		B8A7F67E1F95207E001393E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GiniCatsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = woogii.GiniCatsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiniCats.app/GiniCats";
+			};
+			name = Debug;
+		};
+		B8A7F67F1F95207E001393E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = GiniCatsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = woogii.GiniCatsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GiniCats.app/GiniCats";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -531,6 +642,15 @@
 			buildConfigurations = (
 				B841CB9C1F935CC5007BAE7C /* Debug */,
 				B841CB9D1F935CC5007BAE7C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B8A7F67D1F95207E001393E2 /* Build configuration list for PBXNativeTarget "GiniCatsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B8A7F67E1F95207E001393E2 /* Debug */,
+				B8A7F67F1F95207E001393E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

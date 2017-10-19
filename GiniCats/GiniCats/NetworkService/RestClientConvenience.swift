@@ -8,10 +8,10 @@
 
 import Foundation
 
-// MARK : - RestClient Extension (Convenience Method List)
+// MARK: - RestClient Extension (Convenience Method List)
 extension RestClient {
 
-  // MARK : - Type Alias List
+  // MARK: - Type Alias List
   typealias ImageRequestResult = (_ imageInfoList: [Any]?, _ error: Error?) -> Void
   typealias FavoriteResult = (_ responseMessage: String?) -> Void
 
@@ -36,10 +36,10 @@ extension RestClient {
 
         var catImageInfoList = [CatImageInfo]()
         for elem in xmlInfo[Constants.API.XMLParsingKeys
-          .Response][Constants.API.XMLParsingKeys
-            .Data][Constants.API.XMLParsingKeys
-              .Images][Constants.API.XMLParsingKeys
-                .Image].all {
+                              .Response][Constants.API.XMLParsingKeys
+                                .Data][Constants.API.XMLParsingKeys
+                                  .Images][Constants.API.XMLParsingKeys
+                                    .Image].all {
                   let currentUrl       = elem[Constants.API.XMLParsingKeys.Url].element?.text
                   let currentImageId   = elem[Constants.API.XMLParsingKeys.ImageId].element?.text
                   let currentSourceUrl = elem[Constants.API.XMLParsingKeys.SourceUrl].element?.text
@@ -58,7 +58,7 @@ extension RestClient {
     }
   }
 
-  // MARK : - Request Favoring Cat
+  // MARK: - Request Favoring Cat
   func requestFavoringImageBasedOn(isFavorite: Bool, imageId: String,
                                    completionHandler: @escaping FavoriteResult) {
     let urlString = Constants.API.BaseURL + Constants.API.Methods.FavoriteImage
@@ -81,9 +81,9 @@ extension RestClient {
         guard let xmlInfo = xmlInfo else { return }
 
         let responseMessgae = xmlInfo[Constants.API.XMLParsingKeys
-          .Response][Constants.API.XMLParsingKeys
-            .ApiError][Constants.API.XMLParsingKeys
-              .Message].element?.text
+                                        .Response][Constants.API.XMLParsingKeys
+                                          .ApiError][Constants.API.XMLParsingKeys
+                                            .Message].element?.text
         print(responseMessgae as Any)
         completionHandler(responseMessgae)
       }
@@ -110,21 +110,21 @@ extension RestClient {
         var favoriteCatImageInfoList = [FavoriteCatImageInfo]()
 
         for elem in xmlInfo[Constants.API.XMLParsingKeys
-          .Response][Constants.API.XMLParsingKeys
-            .Data][Constants.API.XMLParsingKeys
-              .Images][Constants.API.XMLParsingKeys
-                .Image].all {
-                  let url       = elem[Constants.API.XMLParsingKeys.Url].element?.text
-                  let imageId   = elem[Constants.API.XMLParsingKeys.ImageId].element?.text
-                  let userId    = elem[Constants.API.XMLParsingKeys.SubId].element?.text
-                  let createdAt = elem[Constants.API.XMLParsingKeys.Created].element?.text
-                  do {
-                    let imageInfo = try FavoriteCatImageInfo(url: url, imageId: imageId,
+                              .Response][Constants.API.XMLParsingKeys
+                                .Data][Constants.API.XMLParsingKeys
+                                  .Images][Constants.API.XMLParsingKeys
+                                    .Image].all {
+          let url       = elem[Constants.API.XMLParsingKeys.Url].element?.text
+          let imageId   = elem[Constants.API.XMLParsingKeys.ImageId].element?.text
+          let userId    = elem[Constants.API.XMLParsingKeys.SubId].element?.text
+          let createdAt = elem[Constants.API.XMLParsingKeys.Created].element?.text
+          do {
+            let imageInfo = try FavoriteCatImageInfo(url: url, imageId: imageId,
                                                              userId: userId, createdAt: createdAt)
-                    favoriteCatImageInfoList.append(imageInfo)
-                  } catch let error as NSError {
-                    print("\(error.userInfo)\(error.localizedDescription)")
-                  }
+            favoriteCatImageInfoList.append(imageInfo)
+          } catch let error as NSError {
+            print("\(error.userInfo)\(error.localizedDescription)")
+          }
         }
         completionHandler(favoriteCatImageInfoList, nil)
       }
@@ -132,9 +132,9 @@ extension RestClient {
   }
 }
 
-// MARK : - RestClient Extension
+// MARK: - RestClient Extension
 extension RestClient {
-  // MARK : - Construct URL
+  // MARK: - Construct URL
   func constructAPIRequestUrl(_ urlString: String, queryParameters: [String:String]) -> URL? {
     guard var urlComponent = URLComponents(string: urlString) else {
       return nil

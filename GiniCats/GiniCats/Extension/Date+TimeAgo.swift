@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK : - Date Extension
+// MARK: - Date Extension
 extension Date {
   func timeAgoDisplay() -> String {
     let secondsAgo = Int(Date().timeIntervalSince(self))

@@ -8,10 +8,10 @@
 
 import UIKit
 
-// MARK : - MenuTableViewController: UITableViewController
+// MARK: - MenuTableViewController: UITableViewController
 class MenuTableViewController: UITableViewController {
 
-  // MARK : - View Life Cycle
+  // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
   }

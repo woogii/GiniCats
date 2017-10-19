@@ -15,7 +15,7 @@ struct FavoriteCatImageInfo {
   var url: String
   var imageId: String
   var userId: String
-  var createdAt: String
+  var createdAt: Date
 
   // MARK : - Initialization
   init(url: String?, imageId: String?, userId: String?, createdAt: String?) throws {
@@ -34,6 +34,14 @@ struct FavoriteCatImageInfo {
     self.url        = url
     self.imageId    = imageId
     self.userId     = userId
-    self.createdAt  = createdAt
+    self.createdAt  = FavoriteCatImageInfo.createDataFormatter().date(from: createdAt) ?? Date()
   }
+
+  static func createDataFormatter() -> DateFormatter {
+    let dateFormater = DateFormatter()
+    dateFormater.locale = Locale(identifier: Constants.TimeAgoDateFormatLocalIdentifier)
+    dateFormater.dateFormat = Constants.TimeAgoDateFormat
+    return dateFormater
+  }
+
 }

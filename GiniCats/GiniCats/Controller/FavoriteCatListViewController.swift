@@ -8,22 +8,31 @@
 
 import UIKit
 
-// MARK : - FavoriteCatListViewController: UIViewController
+// MARK: - FavoriteCatListViewController: UIViewController
 class FavoriteCatListViewController: UIViewController {
 
-  // MARK : - Property List
+  // MARK: - Property List
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var menuBarButtonItem: UIBarButtonItem!
   fileprivate let restClient = RestClient()
   fileprivate var favoriteCatInfoList = [FavoriteCatImageInfo]()
+  private var emptyView: EmptyView!
 
-  // MARK : - View Life Cycle
+  // MARK: - View Life Cycle
   override func viewDidLoad() {
     super.viewDidLoad()
     fetchFavoriteCatList()
+    configureEmptyView()
   }
 
-  // MARK : - Fetch Favorite Cat List
+  private func configureEmptyView() {
+    emptyView = EmptyView(frame: self.view.frame)
+    emptyView.addEmptyViewWith(text: Constants.NoFavoriteCatList)
+    emptyView.isHidden = true
+    self.view.addSubview(emptyView)
+  }
+
+  // MARK: - Fetch Favorite Cat List
   private func fetchFavoriteCatList() {
     restClient.requestFavoriteCatImageInfoList(completionHandler: { [weak self] (imageInfoList, error) in
       guard error == nil else {
@@ -33,23 +42,40 @@ class FavoriteCatListViewController: UIViewController {
       guard let imageInfoList = imageInfoList as? [FavoriteCatImageInfo] else {
         return
       }
-      self?.favoriteCatInfoList = imageInfoList
-      DispatchQueue.main.async {
-        self?.tableView?.reloadData()
+      if imageInfoList.count > 0 {
+        self?.favoriteCatInfoList = imageInfoList.sorted(by: { $0.createdAt > $1.createdAt })
+        DispatchQueue.main.async {
+          self?.displayEmptyViewAndTableViewBasedOn(hiddenStatus: true)
+          self?.tableView?.reloadData()
+        }
+      } else {
+        DispatchQueue.main.async {
+          self?.displayEmptyViewAndTableViewBasedOn(hiddenStatus: false)
+        }
       }
     })
   }
-  // MARK : - Action Method
+
+  private func displayEmptyViewAndTableViewBasedOn(hiddenStatus: Bool) {
+    emptyView.isHidden = hiddenStatus
+    tableView.isHidden = !hiddenStatus
+  }
+
+  // MARK: - Action Method
   @IBAction func tapCloseBarButtonItem(_ sender: UIBarButtonItem) {
     // Set front view controller's position to left
     self.dismiss(animated: true, completion: nil)
   }
+  @IBAction func tapRefreshBarButtonItem(_ sender: UIBarButtonItem) {
+    favoriteCatInfoList = favoriteCatInfoList.sorted(by: { $0.createdAt > $1.createdAt })
+    tableView.reloadData()
+  }
 }
 
-// MARK : - FavoriteCatListViewController : UITableViewDataSource
+// MARK: - FavoriteCatListViewController : UITableViewDataSource
 extension FavoriteCatListViewController: UITableViewDataSource {
 
-  // MARK : - UITableViewDataSource Method List
+  // MARK: - UITableViewDataSource Method List
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return favoriteCatInfoList.count
   }

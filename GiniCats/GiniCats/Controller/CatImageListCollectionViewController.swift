@@ -8,10 +8,10 @@
 
 import UIKit
 
-// MARK : - CatImageListCollectionViewController: UICollectionViewController
+// MARK: - CatImageListCollectionViewController: UICollectionViewController
 class CatImageListCollectionViewController: UICollectionViewController {
 
-  // MARK : - Property List
+  // MARK: - Property List
   @IBOutlet weak var leftBarButtonItemMenu: UIBarButtonItem!
   fileprivate var catImageInfoList = [CatImageInfo]()
   fileprivate let restClient = RestClient()
@@ -31,7 +31,7 @@ class CatImageListCollectionViewController: UICollectionViewController {
     addRefreshControl()
   }
 
-  // MARK : - Configure RefreshControl
+  // MARK: - Configure RefreshControl
   private func addRefreshControl() {
     if #available(iOS 10.0, *) {
       collectionView?.refreshControl = refreshControl
@@ -40,13 +40,13 @@ class CatImageListCollectionViewController: UICollectionViewController {
     }
   }
 
-  // MARK : - RefreshControl Action
+  // MARK: - RefreshControl Action
   func handleRefresh(_ refreshControl: UIRefreshControl) {
     isRefreshing = true
     fetImageInfo()
   }
 
-  // MARK : - Configure Side Menu
+  // MARK: - Configure Side Menu
   private func configureSideMenu() {
     guard revealViewController() != nil else { return }
 
@@ -56,7 +56,7 @@ class CatImageListCollectionViewController: UICollectionViewController {
     view.addGestureRecognizer(revealViewController().panGestureRecognizer())
   }
 
-  // MARK : - Fetch Image Information
+  // MARK: - Fetch Image Information
   private func fetImageInfo() {
     restClient.requestCatImageInfoList(completionHandler: { [weak self] (imageList, error) in
       guard error == nil else {
@@ -75,10 +75,9 @@ class CatImageListCollectionViewController: UICollectionViewController {
       }
     })
   }
-
 }
 
-// MARK : - CatImageListCollectionViewController Extension
+// MARK: - CatImageListCollectionViewController Extension
 extension CatImageListCollectionViewController {
 
   // MARK: UICollectionView DataSource Method List
@@ -113,7 +112,7 @@ extension CatImageListCollectionViewController {
     }
   }
 
-  // MARK : - Set Favorite Cat UI & API Request
+  // MARK: - Set Favorite Cat UI & API Request
   private func setFavoriteCatImage(_ catImageInfo: CatImageInfo) {
     let isFavorite = catImageInfo.isFavorite
     let imageId = catImageInfo.imageId
@@ -124,10 +123,10 @@ extension CatImageListCollectionViewController {
   }
 }
 
-// MARK : - CatImageListCollectionViewController Extension
+// MARK: - CatImageListCollectionViewController Extension
 extension CatImageListCollectionViewController: UICollectionViewDelegateFlowLayout {
 
-  // MARK : - UICollectionViewDelegateFlowLayout Method List
+  // MARK: - UICollectionViewDelegateFlowLayout Method List
   func collectionView(_ collectionView: UICollectionView,
                       layout collectionViewLayout: UICollectionViewLayout,
                       sizeForItemAt indexPath: IndexPath) -> CGSize {

@@ -9,34 +9,33 @@
 import UIKit
 import SDWebImage
 
-// MARK : - FavoriteCatImageTableViewCell: UICollectionViewCell
+// MARK: - FavoriteCatImageTableViewCell: UICollectionViewCell
 class FavoriteCatImageTableViewCell: UITableViewCell {
 
-  // MARK : - Property List
+  // MARK: - Property List
   @IBOutlet weak var backgroundCardView: UIView!
   @IBOutlet weak var catImageView: UIImageView!
   @IBOutlet weak var imageIdLabel: UILabel!
   @IBOutlet weak var timeInfoLabel: UILabel!
-
-  var catImageInfo: FavoriteCatImageInfo! {
-    didSet {
-      updateUI()
-    }
-  }
   private let dateFormatter: DateFormatter = {
     let dateFormater = DateFormatter()
     dateFormater.locale = Locale(identifier: Constants.TimeAgoDateFormatLocalIdentifier)
     dateFormater.dateFormat = Constants.TimeAgoDateFormat
     return dateFormater
   }()
+  var catImageInfo: FavoriteCatImageInfo! {
+    didSet {
+      updateUI()
+    }
+  }
 
-  // MARK : - Prepare For Reusing Cell
+  // MARK: - Prepare For Reusing Cell
   override func prepareForReuse() {
     super.prepareForReuse()
     catImageView.sd_cancelCurrentImageLoad()
   }
 
-  // MARK : - Update Cell UI
+  // MARK: - Update Cell UI
   private func updateUI() {
     initCellProperty()
     setCatImage()
@@ -47,7 +46,7 @@ class FavoriteCatImageTableViewCell: UITableViewCell {
   }
 
   private func setTimeInfoLabel() {
-    timeInfoLabel.text = dateFormatter.date(from:catImageInfo.createdAt)?.timeAgoDisplay()
+    timeInfoLabel.text = catImageInfo.createdAt.timeAgoDisplay()
   }
 
   private func initCellProperty() {
