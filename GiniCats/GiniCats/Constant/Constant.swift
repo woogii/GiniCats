@@ -69,7 +69,7 @@ struct Constants {
       static let ActionKey           = "action"
       static let ActionValue         = "remove"
       static let APIKey              = "api_key"
-      static let APIValue            = ""
+      static let APIValue            = "MTkxNzY4"
       static let ImageIdKey          = "image_id"
       static let SizeKey             = "size"
       static let SizeValue           = "small"

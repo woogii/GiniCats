@@ -11,7 +11,7 @@ import XCTest
 
 class GiniCatsTests: XCTestCase {
 
-  let apiKey = ""
+  let apiKey = "MTkxNzY4"
   var sessionUnderTest: URLSession!
   var restClient: RestClient!
   var favoringImageIsFavorite: Bool!
